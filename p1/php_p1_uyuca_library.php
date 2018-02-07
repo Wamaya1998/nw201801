@@ -86,6 +86,82 @@
     return $platosFuertes;
   }
 
+  function obtenerRefrescos(){
+    $refrescos = array();
+    // Un registro
+    $refrescos[] = array(
+      "codigo" =>"R01",
+      "descripcion" => "Sodas",
+      "precio" => 40.00,
+      "iva" => 0.15,
+    );
+
+    $refrescos[] = array(
+      "codigo" =>"R02",
+      "descripcion" => "Naturales",
+      "precio" => 40.00,
+      "iva" => 0.15,
+    );
+
+    $refrescos[] = array(
+      "codigo" =>"R03",
+      "descripcion" => "B Nacionales",
+      "precio" => 80.00,
+      "iva" => 0.18,
+    );
+
+    $refrescos[] = array(
+      "codigo" =>"R04",
+      "descripcion" => "B Internacionales",
+      "precio" => 90.00,
+      "iva" => 0.18,
+    );
+    return $refrescos;
+  }
+
+
+  function obtenerPostres(){
+    $postres = array();
+    // Un registro
+    $postres[] = array(
+      "codigo" =>"P01",
+      "descripcion" => "Rosquilla En Miel",
+      "precio" => 40.00,
+      "iva" => 0.15,
+    );
+
+    $postres[] = array(
+      "codigo" =>"P02",
+      "descripcion" => "Chilate de Maiz Blanco",
+      "precio" => 50.00,
+      "iva" => 0.15,
+    );
+
+    $postres[] = array(
+      "codigo" =>"P03",
+      "descripcion" => "Coyol en Miel",
+      "precio" => 80.00,
+      "iva" => 0.15,
+    );
+
+    $postres[] = array(
+      "codigo" =>"P04",
+      "descripcion" => "Guineo en leche azucarada",
+      "precio" => 90.00,
+      "iva" => 0.15,
+    );
+    return $postres;
+  }
+
+  function obtenerFormaPago(){
+    return array(
+      array("codigo"=>"TC","dsc"=>"Tarjeta de Crédito"),
+      array("codigo"=>"EF","dsc"=>"Efectivo"),
+      array("codigo"=>"CH","dsc"=>"Cheque"),
+      array("codigo"=>"LC","dsc"=>"A lavar Platos")
+    );
+  }
+
   function arrayToSelect($arreglo, $columnaDescripcion, $columnaCodigo,$selectedValue){
     $tmpHtmlStr = "";
     foreach($arreglo as $item){
@@ -93,6 +169,17 @@
        $tmpHtmlStr .= '<option value="'.$item[$columnaCodigo].'" '.$isSelected.'>'.$item[$columnaDescripcion].'</option>';
     }
     return $tmpHtmlStr;
+  }
+
+  function obtenerRegistroDe($arreglo, $columnaCodigo,$valorAComparar){
+    $registro= array();
+    foreach($arreglo as $item){
+      if($item[$columnaCodigo] == $valorAComparar){
+        $registro = $item;
+        return $registro;
+      }
+    }
+    return $registro;
   }
 
 ?>
