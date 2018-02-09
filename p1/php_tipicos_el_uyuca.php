@@ -122,11 +122,7 @@
         </fieldset>
      </form>
      <div>
-       <?php
-        if(isset($_SESSION["todasLasOrdenes"])){
-          print_r($_SESSION["todasLasOrdenes"]);
-        }
-       ?>
+       <a href="php_tipicos_ordenes.php">Ver Ordenes</a>
      </div>
   </body>
 </html>
