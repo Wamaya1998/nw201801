@@ -33,6 +33,6 @@ $insertSQL = "INSERT INTO `docentes` (`docenteCod`, `docenteNom`,
                        );
 
     if( $conn->query($insertSQL) ){
-      echo $conn->affected_rows();
+      echo $conn->affected_rows;
     }
 ?>

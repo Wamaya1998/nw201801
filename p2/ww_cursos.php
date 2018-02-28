@@ -14,24 +14,16 @@
     <h1>Trabajar con Cursos</h1>
     <section>
       <div>
-        Filtros
+        <a href="ww_curso.php?mode=INS">Agregar Nuevo Curso</a>
       </div>
     </section>
     <section>
         <table>
           <tr>
-            <th>
-              Código
-            </th>
-            <th>
-              Curso
-            </th>
-            <th>
-              Estado
-            </th>
-            <th>
-              Acciones
-            </th>
+            <th>Código</th>
+            <th>Curso</th>
+            <th>Estado</th>
+            <th>Acciones</th>
           </tr>
           <?php foreach($cursos as $curso){ ?>
           <tr>
